@@ -1,0 +1,33 @@
+{
+  "name": "@dword-design/tester-plugin-puppeteer",
+  "version": "0.1.0",
+  "description": "",
+  "repository": "dword-design/tester-plugin-puppeteer",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "check-unknown-files": "base check-unknown-files",
+    "commit": "base commit",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^7.0.7",
+    "@dword-design/puppeteer": "^2.0.0",
+    "@dword-design/tester": "^1.1.0",
+    "express": "^4.17.1"
+  },
+  "peerDependencies": {
+    "@dword-design/puppeteer": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
