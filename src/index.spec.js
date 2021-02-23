@@ -14,5 +14,5 @@ export default tester(
       return server.close()
     },
   },
-  [self]
+  [self()]
 )

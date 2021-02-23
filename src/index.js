@@ -1,6 +1,6 @@
 import puppeteer from '@dword-design/puppeteer'
 
-export default {
+export default () => ({
   after() {
     return this.browser.close()
   },
@@ -8,4 +8,4 @@ export default {
     this.browser = await puppeteer.launch()
     this.page = await this.browser.newPage()
   },
-}
+})
