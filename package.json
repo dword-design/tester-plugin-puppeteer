@@ -20,12 +20,12 @@
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.7",
-    "@dword-design/puppeteer": "^2.0.0",
+    "@dword-design/puppeteer": "^3.0.0",
     "@dword-design/tester": "^1.1.0",
     "express": "^4.17.1"
   },
   "peerDependencies": {
-    "@dword-design/puppeteer": "^2.0.0"
+    "@dword-design/puppeteer": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"
