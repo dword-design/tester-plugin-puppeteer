@@ -61,7 +61,7 @@ export default {
       expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
         .toMatch(endent`
             TN:
-            SF:subdir/pages/index.js
+            SF:${P.join('subdir', 'pages', 'index.js')}
             FNF:0
             FNH:0
             DA:1,1
@@ -122,7 +122,7 @@ export default {
       expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
         .toMatch(endent`
             TN:
-            SF:pages/index.js
+            SF:${P.join('pages', 'index.js')}
             FNF:0
             FNH:0
             DA:1,3
@@ -201,7 +201,7 @@ export default {
       expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
         .toMatch(endent`
           TN:
-          SF:assets/style.scss
+          SF:${P.join('assets', 'style.scss')}
           FNF:0
           FNH:0
           DA:1,2
@@ -292,7 +292,7 @@ export default {
       expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
         .toMatch(endent`
           TN:
-          SF:pages/index.vue
+          SF:${P.join('pages', 'index.vue')}
           FNF:0
           FNH:0
           DA:1,8
