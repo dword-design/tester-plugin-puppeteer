@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/dword-design/tester-plugin-puppeteer/compare/v1.0.4...v2.0.0) (2021-03-22)
+
+
+### Features
+
+* add code coverage ([#6](https://github.com/dword-design/tester-plugin-puppeteer/issues/6)) ([d9fc705](https://github.com/dword-design/tester-plugin-puppeteer/commit/d9fc7050638d2dfbee1db21c5cac0474f5dc01c7))
+
+
+### BREAKING CHANGES
+
+* add code coverage
+
 ## [1.0.4](https://github.com/dword-design/tester-plugin-puppeteer/compare/v1.0.3...v1.0.4) (2021-03-22)
 
 
