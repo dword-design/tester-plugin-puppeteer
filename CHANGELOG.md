@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.0.1...v2.0.2) (2021-03-25)
+
+
+### Bug Fixes
+
+* clear browsing data ([#10](https://github.com/dword-design/tester-plugin-puppeteer/issues/10)) ([31aec51](https://github.com/dword-design/tester-plugin-puppeteer/commit/31aec519c4643ec6fccb890a8571d58090ee20df))
+
 ## [2.0.1](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.0.0...v2.0.1) (2021-03-23)
 
 
