@@ -1,14 +1,13 @@
 import { endent } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
-import { readFile } from 'fs-extra'
 import outputFiles from 'output-files'
-import P from 'path'
+import unifyMochaOutput from 'unify-mocha-output'
 import withLocalTmpDir from 'with-local-tmp-dir'
 
 export default {
-  chdir: () =>
-    withLocalTmpDir(async () => {
+  chdir() {
+    return withLocalTmpDir(async () => {
       await outputFiles({
         'subdir/pages': {
           'index.js': endent`
@@ -44,37 +43,27 @@ export default {
             `,
         },
       })
-      await execa('nyc', [
-        '--reporter',
-        'lcov',
-        '--cwd',
-        process.cwd(),
-        '--exclude',
-        '.nuxt',
-        'mocha',
-        '--ui',
-        packageName`mocha-ui-exports-auto-describe`,
-        '--timeout',
-        80000,
-        'subdir/pages/index.spec.js',
-      ])
-      expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
-        .toMatch(endent`
-            TN:
-            SF:${P.join('subdir', 'pages', 'index.js')}
-            FNF:0
-            FNH:0
-            DA:1,1
-            DA:2,3
-            LF:2
-            LH:2
-            BRF:0
-            BRH:0
-            end_of_record
-          `)
-    }),
-  js: () =>
-    withLocalTmpDir(async () => {
+      const output = await execa(
+        'nyc',
+        [
+          '--cwd',
+          process.cwd(),
+          '--include',
+          'subdir/pages/index.js',
+          'mocha',
+          '--ui',
+          packageName`mocha-ui-exports-auto-describe`,
+          '--timeout',
+          80000,
+          'subdir/pages/index.spec.js',
+        ],
+        { all: true }
+      )
+      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
+    })
+  },
+  js() {
+    return withLocalTmpDir(async () => {
       await outputFiles({
         pages: {
           'index.js': endent`
@@ -105,37 +94,96 @@ export default {
             `,
         },
       })
-      await execa('nyc', [
-        '--reporter',
-        'lcov',
-        '--cwd',
-        process.cwd(),
-        '--exclude',
-        '.nuxt',
-        'mocha',
-        '--ui',
-        packageName`mocha-ui-exports-auto-describe`,
-        '--timeout',
-        80000,
-        'pages/index.spec.js',
-      ])
-      expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
-        .toMatch(endent`
-            TN:
-            SF:${P.join('pages', 'index.js')}
-            FNF:0
-            FNH:0
-            DA:1,3
-            DA:2,5
-            LF:2
-            LH:2
-            BRF:0
-            BRH:0
-            end_of_record
-          `)
-    }),
-  sass: () =>
-    withLocalTmpDir(async () => {
+      const output = await execa(
+        'nyc',
+        [
+          '--cwd',
+          process.cwd(),
+          '--include',
+          'pages/index.js',
+          'mocha',
+          '--ui',
+          packageName`mocha-ui-exports-auto-describe`,
+          '--timeout',
+          80000,
+          'pages/index.spec.js',
+        ],
+        { all: true }
+      )
+      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
+    })
+  },
+  'multiple tests': function () {
+    return withLocalTmpDir(async () => {
+      await outputFiles({
+        'model/test.js': endent`
+          export default {
+            foo: () => {
+              return 1
+            },
+            bar: () => {
+              return 2
+            }
+          }
+        `,
+        pages: {
+          '1.js': endent`
+            import test from '../model/test'
+
+            export default {
+              render: h => <div class="foo">{test.foo()}</div>,
+            }
+
+          `,
+          '2.js': endent`
+            import test from '../model/test'
+
+            export default {
+              render: h => <div class="foo">{test.bar()}</div>,
+            }
+
+          `,
+          'index.spec.js': endent`
+              import tester from '${packageName`@dword-design/tester`}'
+              import testerPluginNuxt from '${packageName`@dword-design/tester-plugin-nuxt`}'
+              import { Builder, Nuxt } from '${packageName`nuxt`}'
+              import self from '../../src'
+
+              export default tester({
+                async test1() {
+                  await this.page.goto('http://localhost:3000/1')
+                  await this.page.evaluate(() => localStorage.setItem('foo', 'bar'))
+                },
+                async test2() {
+                  await this.page.goto('http://localhost:3000/2')
+                  expect(await this.page.evaluate(() => localStorage.getItem('foo'))).toBeNull()
+                }
+              }, [self(), testerPluginNuxt()])
+
+            `,
+        },
+      })
+      const output = await execa(
+        'nyc',
+        [
+          '--cwd',
+          process.cwd(),
+          '--exclude',
+          '.nuxt',
+          'mocha',
+          '--ui',
+          packageName`mocha-ui-exports-auto-describe`,
+          '--timeout',
+          80000,
+          'pages/index.spec.js',
+        ],
+        { all: true }
+      )
+      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
+    })
+  },
+  sass() {
+    return withLocalTmpDir(async () => {
       await outputFiles({
         'assets/style.scss': endent`
           .foo {
@@ -180,68 +228,29 @@ export default {
           `,
         },
       })
-      await execa('nyc', [
-        '--reporter',
-        'lcov',
-        '--cwd',
-        process.cwd(),
-        '--extension',
-        '.vue',
-        '--extension',
-        '.scss',
-        '--exclude',
-        '.nuxt',
-        'mocha',
-        '--ui',
-        packageName`mocha-ui-exports-auto-describe`,
-        '--timeout',
-        80000,
-        'pages/index.spec.js',
-      ])
-      expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
-        .toMatch(endent`
-          TN:
-          SF:${P.join('assets', 'style.scss')}
-          FNF:0
-          FNH:0
-          DA:1,2
-          DA:2,1
-          DA:3,2
-          DA:4,2
-          DA:5,1
-          DA:6,1
-          DA:7,1
-          DA:8,1
-          DA:9,1
-          DA:10,1
-          DA:11,1
-          DA:12,1
-          DA:13,1
-          DA:14,1
-          DA:15,0
-          DA:16,0
-          DA:17,0
-          DA:18,0
-          DA:19,0
-          DA:20,0
-          DA:21,1
-          DA:22,1
-          DA:23,0
-          DA:24,1
-          LF:24
-          LH:17
-          BRDA:1,0,0,1
-          BRDA:5,1,0,1
-          BRDA:6,2,0,1
-          BRDA:7,3,0,1
-          BRDA:20,4,0,1
-          BRF:5
-          BRH:5
-          end_of_record
-        `)
-    }),
-  vue: () =>
-    withLocalTmpDir(async () => {
+      const output = await execa(
+        'nyc',
+        [
+          '--cwd',
+          process.cwd(),
+          '--extension',
+          '.scss',
+          '--include',
+          'assets/style.scss',
+          'mocha',
+          '--ui',
+          packageName`mocha-ui-exports-auto-describe`,
+          '--timeout',
+          80000,
+          'pages/index.spec.js',
+        ],
+        { all: true }
+      )
+      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
+    })
+  },
+  vue() {
+    return withLocalTmpDir(async () => {
       await outputFiles({
         pages: {
           'index.spec.js': endent`
@@ -273,42 +282,25 @@ export default {
           `,
         },
       })
-      await execa('nyc', [
-        '--reporter',
-        'lcov',
-        '--cwd',
-        process.cwd(),
-        '--extension',
-        '.vue',
-        '--exclude',
-        '.nuxt',
-        'mocha',
-        '--ui',
-        packageName`mocha-ui-exports-auto-describe`,
-        '--timeout',
-        80000,
-        'pages/index.spec.js',
-      ])
-      expect(await readFile(P.resolve('coverage', 'lcov.info'), 'utf8'))
-        .toMatch(endent`
-          TN:
-          SF:${P.join('pages', 'index.vue')}
-          FNF:0
-          FNH:0
-          DA:1,8
-          DA:2,1
-          DA:3,1
-          DA:4,0
-          DA:5,1
-          DA:6,1
-          DA:7,1
-          DA:8,1
-          LF:8
-          LH:7
-          BRDA:1,0,0,1
-          BRF:1
-          BRH:1
-          end_of_record
-        `)
-    }),
+      const output = await execa(
+        'nyc',
+        [
+          '--cwd',
+          process.cwd(),
+          '--extension',
+          '.vue',
+          '--include',
+          'pages/index.vue',
+          'mocha',
+          '--ui',
+          packageName`mocha-ui-exports-auto-describe`,
+          '--timeout',
+          80000,
+          'pages/index.spec.js',
+        ],
+        { all: true }
+      )
+      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
+    })
+  },
 }

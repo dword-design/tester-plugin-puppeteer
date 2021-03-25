@@ -20,22 +20,23 @@
     "test": "base test"
   },
   "dependencies": {
-    "@dword-design/functions": "^3.0.0",
     "puppeteer-to-istanbul": "dword-design/puppeteer-to-istanbul#fork"
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.7",
+    "@dword-design/functions": "^3.0.0",
     "@dword-design/puppeteer": "^3.0.0",
     "@dword-design/tester": "^1.1.0",
+    "@dword-design/tester-plugin-nuxt": "^1.0.5",
     "depcheck-package-name": "^1.0.3",
     "execa": "^5.0.0",
-    "fs-extra": "^9.1.0",
     "mocha-ui-exports-auto-describe": "^1.0.10",
     "nuxt": "^2.15.3",
     "nuxt-sourcemaps-abs-sourceroot": "^1.0.0",
     "output-files": "^1.1.21",
     "sass": "^1.32.8",
     "sass-loader": "^10.0.0",
+    "unify-mocha-output": "^1.0.5",
     "with-local-tmp-dir": "^2.2.16"
   },
   "peerDependencies": {
