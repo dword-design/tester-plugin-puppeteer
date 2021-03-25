@@ -1233,7 +1233,7 @@
   integrity sha512-CBRMb6eRapNeJ3U6TeXtsLwiqmXEyPZ2gtVErdRCTDt6WTJ2bamt6jHlAGylfa8CoPgo+jIHC09EcPw5Qvbc2w==
   dependencies:
     delay "^5.0.0"
-    endent "github:dword-design/endent#fork"
+    endent dword-design/endent#fork
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -1243,6 +1243,11 @@
   integrity sha512-u8+JwoKfhE58NOGp3o/oUoEk8fBk+hBihmdPy6glFNX1bmUoDxz5tjJtUhrrFMDNnwCAQVQ1PxBY1cxNXQsLzw==
   dependencies:
     puppeteer "^8.0.0"
+
+"@dword-design/tester-plugin-nuxt@^1.0.5":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-1.0.7.tgz#0d9f19c5c9984b256bf7b7a48d6c5c1f12836287"
+  integrity sha512-PwBZqF6kyltN8FQRf/mQ3+NGT9P2WvbYTMjjOkxq0vbCfaD1qgIgKZTrgAu9jGslRH3MEFn/Qb8L7JcloxQINg==
 
 "@dword-design/tester@^1.1.0":
   version "1.2.2"
@@ -2087,7 +2092,6 @@
 
 "@vue/babel-preset-jsx@dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -2844,7 +2848,6 @@ babel-plugin-transform-imports@^2.0.0:
 
 babel-plugin-wildcard@dword-design/babel-plugin-wildcard#fork:
   version "6.0.0"
-  uid "691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   resolved "https://codeload.github.com/dword-design/babel-plugin-wildcard/tar.gz/691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   dependencies:
     rimraf "^2.6.2"
@@ -4576,7 +4579,6 @@ depcheck-parser-babel@^1.2.0:
 
 depcheck@dword-design/depcheck#fork:
   version "0.0.1"
-  uid "8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   dependencies:
     "@babel/parser" "^7.8.4"
@@ -4908,9 +4910,8 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   dependencies:
     once "^1.4.0"
 
-endent@dword-design/endent#fork, "endent@github:dword-design/endent#fork":
+endent@dword-design/endent#fork:
   version "1.4.0"
-  uid be5433db67eaec07c6c9d00ba3bed2ed946dc664
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
     dedent dword-design/dedent#fork
@@ -5085,7 +5086,6 @@ eslint-config-prettier@^8.0.0:
 
 eslint-import-resolver-babel-module@dword-design/eslint-import-resolver-babel-module#fork:
   version "5.1.2"
-  uid "97550c5b7626a9cf582ea2392b9749702a27473d"
   resolved "https://codeload.github.com/dword-design/eslint-import-resolver-babel-module/tar.gz/97550c5b7626a9cf582ea2392b9749702a27473d"
   dependencies:
     pkg-up "^2.0.0"
@@ -13081,6 +13081,13 @@ unicode-property-aliases-ecmascript@^1.0.4:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.1.0.tgz#dd57a99f6207bedff4628abefb94c50db941c8f4"
   integrity sha512-PqSoPh/pWetQ2phoj5RLiaqIk4kCNwoV3CI+LfGmWLKI3rE3kl1h59XpX2BjgDrmbxD9ARtQobPGU1SguCYuQg==
+
+unify-mocha-output@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/unify-mocha-output/-/unify-mocha-output-1.0.5.tgz#207aa9ac9218afa687ba65342fbf7a99d5a2c010"
+  integrity sha512-iDdz9uY1BqcZUpTnm9Dkx4zNTsdLI9XdcJkvrH6tVDGOmtYTlXoRJPwTutkUgXD1AIM/Fu/DAT+PMJgamH2+JQ==
+  dependencies:
+    "@dword-design/functions" "^3.0.0"
 
 union-value@^1.0.0:
   version "1.0.1"
