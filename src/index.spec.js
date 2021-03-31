@@ -43,6 +43,7 @@ export default {
             `,
         },
       })
+
       const output = await execa(
         'nyc',
         [
@@ -94,6 +95,7 @@ export default {
             `,
         },
       })
+
       const output = await execa(
         'nyc',
         [
@@ -163,6 +165,7 @@ export default {
             `,
         },
       })
+
       const output = await execa(
         'nyc',
         [
@@ -228,6 +231,7 @@ export default {
           `,
         },
       })
+
       const output = await execa(
         'nyc',
         [
@@ -282,6 +286,7 @@ export default {
           `,
         },
       })
+
       const output = await execa(
         'nyc',
         [
