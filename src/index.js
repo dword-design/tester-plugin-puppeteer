@@ -4,7 +4,7 @@ import puppeteerToIstanbul from 'puppeteer-to-istanbul'
 
 const storagePath = P.resolve('.nyc_output')
 
-export default () => ({
+export default (options = {}) => ({
   after() {
     puppeteerToIstanbul.write(this.puppeteerCoverages, { storagePath })
   },
@@ -20,7 +20,7 @@ export default () => ({
     this.puppeteerCoverages = []
   },
   async beforeEach() {
-    this.browser = await puppeteer.launch()
+    this.browser = await puppeteer.launch(options.launchOptions)
     this.page = await this.browser.newPage()
     await Promise.all([
       this.page.coverage.startJSCoverage(),

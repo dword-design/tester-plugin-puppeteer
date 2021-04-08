@@ -115,6 +115,50 @@ export default {
       expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
     })
   },
+  launchOptions: () =>
+    withLocalTmpDir(async () => {
+      await outputFiles({
+        pages: {
+          'index.js': endent`
+          export default {
+            render: h => <div class="foo">{process.env.FOO}</div>,
+          }
+        `,
+          'index.spec.js': endent`
+            import tester from '${packageName`@dword-design/tester`}'
+            import { Builder, Nuxt } from '${packageName`nuxt`}'
+            import self from '../../src'
+
+            export default tester({
+              async works() {
+                const nuxt = new Nuxt({ dev: true })
+                await new Builder(nuxt).build()
+                try {
+                  await nuxt.listen()
+                  await this.page.goto('http://localhost:3000')
+                  const $foo = await this.page.waitForSelector('.foo')
+                  expect(await $foo.evaluate(el => el.innerText)).toEqual('Hello world')
+                } finally {
+                  nuxt.close()
+                }
+              }
+            }, [self({ launchOptions: { timeout: 1 } })])
+
+          `,
+        },
+      })
+      await expect(
+        execa('mocha', [
+          '--ui',
+          packageName`mocha-ui-exports-auto-describe`,
+          '--timeout',
+          80000,
+          'pages/index.spec.js',
+        ])
+      ).rejects.toThrow(
+        'TimeoutError: Timed out after 1 ms while trying to connect to the browser!'
+      )
+    }),
   'multiple tests': function () {
     return withLocalTmpDir(async () => {
       await outputFiles({
