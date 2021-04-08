@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.0.3...v2.1.0) (2021-04-08)
+
+
+### Features
+
+* launch options ([#14](https://github.com/dword-design/tester-plugin-puppeteer/issues/14)) ([16b476f](https://github.com/dword-design/tester-plugin-puppeteer/commit/16b476fa67c611372136aab1db851aba6bc2c528))
+
 ## [2.0.3](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.0.2...v2.0.3) (2021-03-31)
 
 
