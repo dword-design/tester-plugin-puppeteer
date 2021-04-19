@@ -32,7 +32,7 @@
     "execa": "^5.0.0",
     "mocha-ui-exports-auto-describe": "^1.0.10",
     "nuxt": "^2.15.3",
-    "nuxt-sourcemaps-abs-sourceroot": "^1.0.0",
+    "nuxt-sourcemaps-abs-sourceroot": "^1.0.2",
     "output-files": "^1.1.21",
     "sass": "^1.32.8",
     "sass-loader": "^10.0.0",
