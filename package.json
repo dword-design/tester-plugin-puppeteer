@@ -27,7 +27,7 @@
     "@dword-design/functions": "^3.0.0",
     "@dword-design/puppeteer": "^3.0.0",
     "@dword-design/tester": "^1.1.0",
-    "@dword-design/tester-plugin-nuxt": "^1.0.5",
+    "@dword-design/tester-plugin-nuxt": "^1.0.8",
     "depcheck-package-name": "^1.0.3",
     "execa": "^5.0.0",
     "mocha-ui-exports-auto-describe": "^1.0.10",

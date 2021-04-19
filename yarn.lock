@@ -1234,10 +1234,10 @@
   dependencies:
     puppeteer "^8.0.0"
 
-"@dword-design/tester-plugin-nuxt@^1.0.5":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-1.0.8.tgz#a292d21b75367de90e5a5c2ef0d496c4322bdb09"
-  integrity sha512-k8QnouHyHqoqzzsMb85TVYhNkuqrI0sQNGOjSaLRSEBEK0UmLnakOHbHAMaAEQA49QqjW9VthEmDodpmzqDjOQ==
+"@dword-design/tester-plugin-nuxt@^1.0.8":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-1.0.9.tgz#e3066bfba607dd4db09674e815a6e6209edf1426"
+  integrity sha512-NkjuF2B43Rtv+d7U05mzEDd2npyfV/AlddF9sATmIZgJTnzr6YTq6z0C2Ygyezs0fUlDH0P/JjZ5VrOMqqHWjg==
 
 "@dword-design/tester@^1.1.0":
   version "1.2.4"
