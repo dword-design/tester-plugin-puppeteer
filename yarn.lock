@@ -12585,10 +12585,10 @@ unicode-property-aliases-ecmascript@^1.0.4:
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.1.0.tgz#dd57a99f6207bedff4628abefb94c50db941c8f4"
   integrity sha512-PqSoPh/pWetQ2phoj5RLiaqIk4kCNwoV3CI+LfGmWLKI3rE3kl1h59XpX2BjgDrmbxD9ARtQobPGU1SguCYuQg==
 
-unify-mocha-output@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/unify-mocha-output/-/unify-mocha-output-1.0.6.tgz#4b56b00ca7b165180773088c14ac75383325cc7c"
-  integrity sha512-MZUB2pNubOrt/t+qKmuZr8x3dZW/lFMsxCxGIKfVXrslUdpeG+ByC+z9YeoSeWkv2ZSf/FZ7sfIUCiP+dsut4A==
+unify-mocha-output@^1.0.6:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/unify-mocha-output/-/unify-mocha-output-1.0.7.tgz#7ce73380d9320bfeb89b7816bc06600d87aae6e8"
+  integrity sha512-SBTBHd/Gd+b3fJTNG76SVIyYp51Bc/rC8KFfXKw5AlyeZAnAET2bY3wtJKpbePvJLM5tuYtoevZWuzADJbBeUQ==
   dependencies:
     "@dword-design/functions" "^3.0.0"
 
