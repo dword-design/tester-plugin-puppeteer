@@ -1,7 +1,7 @@
 {
   "name": "@dword-design/tester-plugin-puppeteer",
   "version": "2.1.1",
-  "description": "",
+  "description": null,
   "repository": "dword-design/tester-plugin-puppeteer",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
@@ -52,5 +52,7 @@
         "sass-loader"
       ]
     }
-  }
+  },
+  "homepage": null,
+  "keywords": []
 }
