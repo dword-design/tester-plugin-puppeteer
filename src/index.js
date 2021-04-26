@@ -22,6 +22,9 @@ export default (options = {}) => ({
   async beforeEach() {
     this.browser = await puppeteer.launch(options.launchOptions)
     this.page = await this.browser.newPage()
+    this.page.on('framenavigated', () =>
+      this.page.addStyleTag({ content: '* { caret-color: transparent }' })
+    )
     await Promise.all([
       this.page.coverage.startJSCoverage(),
       this.page.coverage.startCSSCoverage(),
