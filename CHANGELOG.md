@@ -1,3 +1,10 @@
+## [2.1.6](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.5...v2.1.6) (2021-04-26)
+
+
+### Bug Fixes
+
+* hide caret ([#34](https://github.com/dword-design/tester-plugin-puppeteer/issues/34)) ([21efed8](https://github.com/dword-design/tester-plugin-puppeteer/commit/21efed87148fc1f2ae65e5bcce0fa053abc5bce1))
+
 ## [2.1.5](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.4...v2.1.5) (2021-04-26)
 
 
