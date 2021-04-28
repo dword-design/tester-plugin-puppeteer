@@ -1,7 +1,6 @@
 {
   "name": "@dword-design/tester-plugin-puppeteer",
   "version": "2.1.6",
-  "description": "",
   "repository": "dword-design/tester-plugin-puppeteer",
   "funding": "https://www.buymeacoffee.com/dword",
   "license": "MIT",
