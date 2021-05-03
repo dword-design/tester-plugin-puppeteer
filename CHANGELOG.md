@@ -1,3 +1,12 @@
+## [2.1.10](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.9...v2.1.10) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#38](https://github.com/dword-design/tester-plugin-puppeteer/issues/38)) ([45095f3](https://github.com/dword-design/tester-plugin-puppeteer/commit/45095f3c7d65f7b6c63179a701778bb18d91c38d))
+* update dependency mocha-ui-exports-auto-describe to v2 ([#39](https://github.com/dword-design/tester-plugin-puppeteer/issues/39)) ([e768d10](https://github.com/dword-design/tester-plugin-puppeteer/commit/e768d107a1fb6694672c144bdd4274fd2f248052))
+* update dependency unify-mocha-output to v2 ([#40](https://github.com/dword-design/tester-plugin-puppeteer/issues/40)) ([ed78d73](https://github.com/dword-design/tester-plugin-puppeteer/commit/ed78d730031b222e3855addd2a96651a77738f96))
+
 ## [2.1.9](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.8...v2.1.9) (2021-05-03)
 
 
