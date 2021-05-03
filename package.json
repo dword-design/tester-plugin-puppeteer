@@ -43,6 +43,9 @@
   "peerDependencies": {
     "@dword-design/puppeteer": "^4.0.0"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "publishConfig": {
     "access": "public"
   },
