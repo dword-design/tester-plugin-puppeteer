@@ -31,7 +31,7 @@
     "depcheck-package-name": "^1.0.3",
     "execa": "^5.0.0",
     "fs-extra": "^9.1.0",
-    "mocha-ui-exports-auto-describe": "^1.0.10",
+    "mocha-ui-exports-auto-describe": "^2.0.0",
     "nuxt": "2.15.2",
     "nuxt-sourcemaps-abs-sourceroot": "^1.0.0",
     "output-files": "^1.1.21",
