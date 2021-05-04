@@ -1,3 +1,10 @@
+## [2.1.13](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.12...v2.1.13) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency nuxt-sourcemaps-abs-sourceroot to v2 ([#47](https://github.com/dword-design/tester-plugin-puppeteer/issues/47)) ([71f3952](https://github.com/dword-design/tester-plugin-puppeteer/commit/71f395264ee0d419628c6461dfc6894dbac547b8))
+
 ## [2.1.12](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.11...v2.1.12) (2021-05-04)
 
 
