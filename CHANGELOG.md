@@ -1,3 +1,14 @@
+## [2.1.11](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.10...v2.1.11) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester to v2 ([#42](https://github.com/dword-design/tester-plugin-puppeteer/issues/42)) ([6e5ad9a](https://github.com/dword-design/tester-plugin-puppeteer/commit/6e5ad9a7595463f363b1a4ababa4341c9723167b))
+* update dependency depcheck-package-name to v2 ([#44](https://github.com/dword-design/tester-plugin-puppeteer/issues/44)) ([53e9e36](https://github.com/dword-design/tester-plugin-puppeteer/commit/53e9e3620ac4cc4af9fa3e4625375602a5e2ba23))
+* update dependency fs-extra to v10 ([#46](https://github.com/dword-design/tester-plugin-puppeteer/issues/46)) ([218e057](https://github.com/dword-design/tester-plugin-puppeteer/commit/218e0573f2217835c0aa956e1633086d06e33193))
+* update dependency output-files to v2 ([#45](https://github.com/dword-design/tester-plugin-puppeteer/issues/45)) ([d3355e1](https://github.com/dword-design/tester-plugin-puppeteer/commit/d3355e1a5abe64946a8839dd3d98df3755910faf))
+* update dependency with-local-tmp-dir to v4 ([#48](https://github.com/dword-design/tester-plugin-puppeteer/issues/48)) ([eac7aa6](https://github.com/dword-design/tester-plugin-puppeteer/commit/eac7aa6996556166cf7d4bf8e94a8d23321048c4))
+
 ## [2.1.10](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.9...v2.1.10) (2021-05-03)
 
 
