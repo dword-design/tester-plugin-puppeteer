@@ -1288,7 +1288,7 @@
     commitizen "^4.0.3"
     constant-case "^3.0.3"
     cz-conventional-changelog "^3.1.0"
-    depcheck "github:dword-design/depcheck#fork"
+    depcheck dword-design/depcheck#fork
     depcheck-detector-execa "^1.2.1"
     depcheck-detector-package-name "^1.0.0"
     depcheck-package-name "^1.0.0"
@@ -1391,7 +1391,7 @@
   integrity sha512-ceh7fcd9BGuBus/4F6Ltyk+oitow8RQ+dEUfwCqQP79EdIuhvW+vQYQ0F7+Ubj/oO1fZLTHn0VEfpJxdnf+S5A==
   dependencies:
     delay "^5.0.0"
-    endent "github:dword-design/endent#fork"
+    endent dword-design/endent#fork
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -2365,7 +2365,6 @@
 
 "@vue/babel-preset-jsx@dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -3094,7 +3093,6 @@ babel-plugin-transform-imports@^2.0.0:
 
 babel-plugin-wildcard@dword-design/babel-plugin-wildcard#fork:
   version "6.0.0"
-  uid "691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   resolved "https://codeload.github.com/dword-design/babel-plugin-wildcard/tar.gz/691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   dependencies:
     rimraf "^2.6.2"
@@ -5103,7 +5101,6 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
 
 endent@dword-design/endent#fork, "endent@github:dword-design/endent#fork":
   version "1.4.0"
-  uid be5433db67eaec07c6c9d00ba3bed2ed946dc664
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
     dedent dword-design/dedent#fork
@@ -9258,7 +9255,7 @@ nuxt-sourcemaps-abs-sourceroot@^2.0.0:
   resolved "https://registry.yarnpkg.com/nuxt-sourcemaps-abs-sourceroot/-/nuxt-sourcemaps-abs-sourceroot-2.0.0.tgz#654b7ded3f9e0da2b306a013dfa6c6f9698283b7"
   integrity sha512-JI4jxf2ZOsXQSTnOIV3H56oMBbSnWsZPWnYpC5IO/4qHfaaYzcmiXFc6aw23yENtuMZYrBSAKtPe68CcbjZQ4g==
 
-nuxt@2.15.5:
+nuxt@~2.15.5:
   version "2.15.5"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.5.tgz#b22d18749c649e0650f64283f30e3eeb74ddcf20"
   integrity sha512-6ioiDTZ5lodq8PbN14quRRLv2XETx07oNx88QskL/4bomqH2nd10fKxzU9tui2IYcHwCuTpafclKpWdkUwBUZQ==
