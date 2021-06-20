@@ -1,3 +1,10 @@
+## [2.1.17](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.16...v2.1.17) (2021-06-20)
+
+
+### Bug Fixes
+
+* xvfb ([#56](https://github.com/dword-design/tester-plugin-puppeteer/issues/56)) ([3613fc4](https://github.com/dword-design/tester-plugin-puppeteer/commit/3613fc4f696ed1bf639355435245de7ac4e18067))
+
 ## [2.1.16](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.15...v2.1.16) (2021-06-14)
 
 
