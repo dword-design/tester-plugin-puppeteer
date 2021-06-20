@@ -1,7 +1,7 @@
 import { endent, map, range } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
-import { readFile } from 'fs-extra'
+import { outputFile, readFile } from 'fs-extra'
 import outputFiles from 'output-files'
 import unifyMochaOutput from 'unify-mocha-output'
 import withLocalTmpDir from 'with-local-tmp-dir'
@@ -125,6 +125,26 @@ export default {
       expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
     })
   },
+  headful: () =>
+    withLocalTmpDir(async () => {
+      await outputFile(
+        'index.spec.js',
+        endent`
+        import tester from '${packageName`@dword-design/tester`}'
+        import self from '../src'
+
+        export default tester({ works: () => {} }, [self({ launchOptions: { headless: false } })])
+
+      `
+      )
+      await execa('mocha', [
+        '--ui',
+        packageName`mocha-ui-exports-auto-describe`,
+        '--timeout',
+        80000,
+        'index.spec.js',
+      ])
+    }),
   js() {
     return withLocalTmpDir(async () => {
       await outputFiles({

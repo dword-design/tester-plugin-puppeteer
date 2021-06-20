@@ -20,7 +20,9 @@
     "test:raw": "base test:raw"
   },
   "dependencies": {
-    "puppeteer-to-istanbul": "dword-design/puppeteer-to-istanbul#fork"
+    "is-docker": "^2.2.1",
+    "puppeteer-to-istanbul": "dword-design/puppeteer-to-istanbul#fork",
+    "xvfb": "^0.4.0"
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
