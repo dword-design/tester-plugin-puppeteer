@@ -2,7 +2,7 @@
   "name": "@dword-design/tester-plugin-puppeteer",
   "version": "2.1.17",
   "repository": "dword-design/tester-plugin-puppeteer",
-  "funding": "https://www.buymeacoffee.com/dword",
+  "funding": "https://github.com/sponsors/dword-design",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
   "main": "dist/index.js",
