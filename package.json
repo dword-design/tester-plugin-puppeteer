@@ -38,7 +38,7 @@
     "nuxt-sourcemaps-abs-sourceroot": "^2.0.0",
     "output-files": "^2.0.0",
     "sass": "^1.32.8",
-    "sass-loader": "^10.0.0",
+    "sass-loader": "^12.0.0",
     "unify-mocha-output": "^2.0.0",
     "with-local-tmp-dir": "^4.0.0"
   },
