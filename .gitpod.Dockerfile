@@ -18,4 +18,22 @@ RUN sudo apt-get install -y graphviz
 RUN brew install gh
 
 # Puppeteer dependencies
-RUN sudo apt-get update && sudo apt-get install -y libgtk-3-0 libx11-xcb1 libnss3 libxss1 libasound2 libgbm1 libxshmfence1
+# RUN sudo apt-get update && sudo apt-get install -y libgtk-3-0 libx11-xcb1 libnss3 libxss1 libasound2 libgbm1 libxshmfence1
+
+# Playwright dependencies
+
+RUN sudo apt-get -y install libnss3\
+  libnspr4\
+  libatk1.0-0\
+  libatk-bridge2.0-0\
+  libcups2\
+  libdrm2\
+  libxkbcommon0\
+  libxcomposite1\
+  libxdamage1\
+  libxfixes3\
+  libxrandr2\
+  libgbm1\
+  libgtk-3-0\
+  libatspi2.0-0\
+  libx11-xcb-dev

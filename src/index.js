@@ -1,6 +1,6 @@
-import puppeteer from '@dword-design/puppeteer'
 import isDocker from 'is-docker'
 import P from 'path'
+import playwright from 'playwright'
 import puppeteerToIstanbul from 'puppeteer-to-istanbul'
 import Xvfb from 'xvfb'
 
@@ -41,7 +41,7 @@ export default (options = {}) => {
       if (useXvfb) {
         xvfb.startSync()
       }
-      this.browser = await puppeteer.launch(options.launchOptions)
+      this.browser = await playwright.webkit.launch(options.launchOptions)
       this.page = await this.browser.newPage()
       this.page.on('framenavigated', () =>
         this.page.addStyleTag({ content: '* { caret-color: transparent }' })
