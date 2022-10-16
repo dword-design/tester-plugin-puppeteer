@@ -14,36 +14,32 @@
     "commit": "base commit",
     "dev": "base dev",
     "lint": "base lint",
-    "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
     "test": "base test",
     "test:raw": "base test:raw"
   },
   "dependencies": {
+    "fs-extra": "^10.0.0",
     "is-docker": "^2.2.1",
-    "puppeteer-to-istanbul": "dword-design/puppeteer-to-istanbul#fork",
+    "playwright": "^1.27.1",
+    "uuid": "^9.0.0",
+    "v8-to-istanbul": "^9.0.1",
     "xvfb": "^0.4.0"
   },
   "devDependencies": {
     "@dword-design/base": "^8.0.0",
     "@dword-design/functions": "^4.0.0",
-    "@dword-design/puppeteer": "^5.0.0",
     "@dword-design/tester": "^2.0.0",
     "@dword-design/tester-plugin-nuxt": "^2.0.0",
     "depcheck-package-name": "^2.0.0",
     "execa": "^5.0.0",
-    "fs-extra": "^10.0.0",
     "mocha-ui-exports-auto-describe": "^2.0.0",
     "nuxt": "~2.15.5",
-    "nuxt-sourcemaps-abs-sourceroot": "^2.0.0",
     "output-files": "^2.0.0",
     "sass": "^1.32.8",
     "sass-loader": "^10.0.0",
     "unify-mocha-output": "^2.0.0",
     "with-local-tmp-dir": "^4.0.0"
-  },
-  "peerDependencies": {
-    "@dword-design/puppeteer": "^5.0.0"
   },
   "engines": {
     "node": ">=12"

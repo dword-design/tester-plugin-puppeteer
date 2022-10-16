@@ -68,63 +68,6 @@ export default {
         |> Promise.all)
     })
   },
-  chdir() {
-    return withLocalTmpDir(async () => {
-      await outputFiles({
-        'subdir/pages': {
-          'index.js': endent`
-            export default {
-              render: h => <div class="foo">Hello world</div>,
-            }
-          `,
-          'index.spec.js': endent`
-              import tester from '${packageName`@dword-design/tester`}'
-              import { Builder, Nuxt } from '${packageName`nuxt`}'
-              import self from '../../../src'
-
-              export default tester({
-                async works() {
-                  process.chdir('subdir')
-                  const nuxt = new Nuxt({
-                    dev: true,
-                    modules: ['${packageName`nuxt-sourcemaps-abs-sourceroot`}'],
-                  })
-                  await new Builder(nuxt).build()
-                  try {
-                    await nuxt.listen()
-                    await this.page.goto('http://localhost:3000')
-                    const $foo = await this.page.waitForSelector('.foo')
-                    expect(await $foo.evaluate(el => el.innerText)).toEqual('Hello world')
-                  } finally {
-                    nuxt.close()
-                    process.chdir('..')
-                  }
-                }
-              }, [self()])
-
-            `,
-        },
-      })
-
-      const output = await execa(
-        'nyc',
-        [
-          '--cwd',
-          process.cwd(),
-          '--include',
-          'subdir/pages/index.js',
-          'mocha',
-          '--ui',
-          packageName`mocha-ui-exports-auto-describe`,
-          '--timeout',
-          80000,
-          'subdir/pages/index.spec.js',
-        ],
-        { all: true }
-      )
-      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
-    })
-  },
   headful: () =>
     withLocalTmpDir(async () => {
       await outputFile(
@@ -152,6 +95,11 @@ export default {
           'index.js': endent`
             export default {
               render: h => <div class="foo">Hello world</div>,
+              methods: {
+                foo: () => {
+                  console.log('bar')
+                },
+              },
             }
           `,
           'index.spec.js': endent`
