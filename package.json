@@ -34,7 +34,7 @@
     "@dword-design/tester-plugin-nuxt": "^2.0.0",
     "@dword-design/tester-plugin-tmp-dir": "^2.1.6",
     "depcheck-package-name": "^2.0.0",
-    "execa": "^5.0.0",
+    "execa": "^6.0.0",
     "fs-extra": "^10.0.0",
     "mocha-ui-exports-auto-describe": "^2.0.0",
     "nuxt": "~2.15.5",
