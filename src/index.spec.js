@@ -1,7 +1,7 @@
 import { endent, map, range } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
-import { outputFile, readFile } from 'fs-extra'
+import fs from 'fs-extra'
 import outputFiles from 'output-files'
 import unifyMochaOutput from 'unify-mocha-output'
 import withLocalTmpDir from 'with-local-tmp-dir'
@@ -21,7 +21,7 @@ export default {
             import tester from '${packageName`@dword-design/tester`}'
             import { Builder, Nuxt } from '${packageName`nuxt`}'
             import { delay, filter, map, range } from '@dword-design/functions'
-            import self from '../../src'
+            import self from '../../src/index.js'
 
             export default tester({
               async works() {
@@ -62,7 +62,7 @@ export default {
       await (range(10)
         |> map(async index =>
           expect(
-            readFile(`screenshot${index}.png`) |> await
+            fs.readFile(`screenshot${index}.png`) |> await
           ).toMatchImageSnapshot(this)
         )
         |> Promise.all)
@@ -80,7 +80,7 @@ export default {
           'index.spec.js': endent`
               import tester from '${packageName`@dword-design/tester`}'
               import { Builder, Nuxt } from '${packageName`nuxt`}'
-              import self from '../../../src'
+              import self from '../../../src/index.js'
 
               export default tester({
                 async works() {
@@ -127,11 +127,11 @@ export default {
   },
   headful: () =>
     withLocalTmpDir(async () => {
-      await outputFile(
+      await fs.outputFile(
         'index.spec.js',
         endent`
         import tester from '${packageName`@dword-design/tester`}'
-        import self from '../src'
+        import self from '../src/index.js'
 
         export default tester({ works: () => {} }, [self({ launchOptions: { headless: false } })])
 
@@ -157,7 +157,7 @@ export default {
           'index.spec.js': endent`
               import tester from '${packageName`@dword-design/tester`}'
               import { Builder, Nuxt } from '${packageName`nuxt`}'
-              import self from '../../src'
+              import self from '../../src/index.js'
 
               export default tester({
                 async works() {
@@ -209,7 +209,7 @@ export default {
           'index.spec.js': endent`
             import tester from '${packageName`@dword-design/tester`}'
             import { Builder, Nuxt } from '${packageName`nuxt`}'
-            import self from '../../src'
+            import self from '../../src/index.js'
 
             export default tester({
               async works() {
@@ -241,7 +241,7 @@ export default {
         'TimeoutError: Timed out after 1 ms while trying to connect to the browser!'
       )
     }),
-  'multiple tests': function () {
+  'multiple tests'() {
     return withLocalTmpDir(async () => {
       await outputFiles({
         'model/test.js': endent`
@@ -275,7 +275,7 @@ export default {
               import tester from '${packageName`@dword-design/tester`}'
               import testerPluginNuxt from '${packageName`@dword-design/tester-plugin-nuxt`}'
               import { Builder, Nuxt } from '${packageName`nuxt`}'
-              import self from '../../src'
+              import self from '../../src/index.js'
 
               export default tester({
                 async test1() {
@@ -328,7 +328,7 @@ export default {
           'index.spec.js': endent`
             import tester from '${packageName`@dword-design/tester`}'
             import { Builder, Nuxt } from '${packageName`nuxt`}'
-            import self from '../../src'
+            import self from '../../src/index.js'
 
             export default tester({
               async works() {
@@ -386,7 +386,7 @@ export default {
           'index.spec.js': endent`
             import tester from '${packageName`@dword-design/tester`}'
             import { Builder, Nuxt } from '${packageName`nuxt`}'
-            import self from '../../src'
+            import self from '../../src/index.js'
 
             export default tester({
               async works() {

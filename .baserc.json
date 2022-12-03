@@ -1,0 +1,10 @@
+{
+  "name": "@dword-design/node",
+  "testInContainer": true,
+  "depcheckConfig": {
+    "ignoreMatches": [
+      "sass",
+      "sass-loader"
+    ]
+  }
+}
