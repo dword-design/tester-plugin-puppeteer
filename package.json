@@ -22,7 +22,7 @@
     "test:raw": "base test:raw"
   },
   "dependencies": {
-    "is-docker": "^2.2.1",
+    "is-docker": "^3.0.0",
     "puppeteer-to-istanbul": "dword-design/puppeteer-to-istanbul#fork",
     "xvfb": "^0.4.0"
   },
