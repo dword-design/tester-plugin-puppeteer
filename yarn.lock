@@ -10940,10 +10940,10 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha512-Y1wZESM7VUThYY+4W+X4ySH2maqcA+p7UR+w8VWNWVAd6lwuXXWz/w/Cz43J/dI2I+PS6wD5N+bJUF+gjWvIqg==
 
-nuxt-sourcemaps-abs-sourceroot@^2.0.0:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/nuxt-sourcemaps-abs-sourceroot/-/nuxt-sourcemaps-abs-sourceroot-2.0.9.tgz#bb6e0118338582d9d4dec07686a989e854746dd8"
-  integrity sha512-/0Sw+swGyayCggvyhQlZr27jQI8+JdKwv7x3/ctRnF11K0iwxx70pNVu4f33rabAarSKcb3IDm7fm64h+iPyIA==
+nuxt-sourcemaps-abs-sourceroot@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-sourcemaps-abs-sourceroot/-/nuxt-sourcemaps-abs-sourceroot-3.0.0.tgz#26eb041b2df0848252d6e2bb64d24b9e8027b161"
+  integrity sha512-TqJB+ngXAUjcE3jJokQj60fDFXteugk1Vfq8pqry8VKKEujDezc7m3FuhKTxQt2lNieZtNg/zxvsvb7hroCkxQ==
 
 nuxt@~2.15.5:
   version "2.15.8"

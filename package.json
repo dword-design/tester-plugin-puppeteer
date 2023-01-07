@@ -38,7 +38,7 @@
     "fs-extra": "^10.0.0",
     "mocha-ui-exports-auto-describe": "^2.0.0",
     "nuxt": "~2.15.5",
-    "nuxt-sourcemaps-abs-sourceroot": "^2.0.0",
+    "nuxt-sourcemaps-abs-sourceroot": "^3.0.0",
     "output-files": "^2.0.0",
     "sass": "^1.32.8",
     "sass-loader": "^10.0.0",
