@@ -106,11 +106,6 @@ export default tester(
     launchOptions: {
       files: {
         pages: {
-          'index.js': endent`
-        export default {
-          render: h => <div class="foo">{process.env.FOO}</div>,
-        }
-      `,
           'index.spec.js': endent`
           import tester from '${packageName`@dword-design/tester`}'
           import testerPluginNuxt from '${packageName`@dword-design/tester-plugin-nuxt`}'
@@ -127,6 +122,11 @@ export default tester(
           }, [testerPluginNuxt(), self({ launchOptions: { timeout: 1 } })])
 
         `,
+          'index.vue': endent`
+            <template>
+              <div class="foo" />
+            </template>
+          `,
         },
       },
       test: () =>
