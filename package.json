@@ -39,7 +39,7 @@
     "nuxt": "^2",
     "output-files": "^2.0.0",
     "sass": "^1.32.8",
-    "sass-loader": "^10.0.0"
+    "sass-loader": "^13.0.0"
   },
   "peerDependencies": {
     "@dword-design/puppeteer": "^5.0.0"
