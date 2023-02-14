@@ -105,33 +105,20 @@ export default tester(
     },
     launchOptions: {
       files: {
-        pages: {
-          'index.spec.js': endent`
+        'index.spec.js': endent`
           import tester from '${packageName`@dword-design/tester`}'
-          import testerPluginNuxt from '${packageName`@dword-design/tester-plugin-nuxt`}'
-          import { expect } from '${packageName`expect`}'
 
-          import self from '../../src/index.js'
+          import self from '../src/index.js'
 
           export default tester({
-            async works() {
-              await this.page.goto('http://localhost:3000')
-              const $foo = await this.page.waitForSelector('.foo')
-              expect(await $foo.evaluate(el => el.innerText)).toEqual('Hello world')
-            }
-          }, [testerPluginNuxt(), self({ launchOptions: { timeout: 1 } })])
+            works: () => {},
+          }, [self({ launchOptions: { timeout: 1 } })])
 
         `,
-          'index.vue': endent`
-            <template>
-              <div class="foo" />
-            </template>
-          `,
-        },
       },
       test: () =>
         expect(
-          execaCommand('mocha --ui exports --timeout 80000 pages/index.spec.js')
+          execaCommand('mocha --ui exports --timeout 80000 index.spec.js')
         ).rejects.toThrow(
           'TimeoutError: Timed out after 1 ms while trying to connect to the browser!'
         ),
