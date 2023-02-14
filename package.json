@@ -14,6 +14,7 @@
   "scripts": {
     "checkUnknownFiles": "base checkUnknownFiles",
     "commit": "base commit",
+    "depcheck": "base depcheck",
     "dev": "base dev",
     "lint": "base lint",
     "prepare": "base prepare",
@@ -22,27 +23,23 @@
     "test:raw": "base test:raw"
   },
   "dependencies": {
-    "is-docker": "^2.2.1",
-    "puppeteer-to-istanbul": "dword-design/puppeteer-to-istanbul#fork",
+    "is-docker": "^3.0.0",
     "xvfb": "^0.4.0"
   },
   "devDependencies": {
     "@dword-design/base": "^9.1.4",
-    "@dword-design/functions": "^4.0.0",
-    "@dword-design/puppeteer": "^5.0.0",
+    "@dword-design/functions": "^4.1.0",
+    "@dword-design/puppeteer": "^6.0.2",
     "@dword-design/tester": "^2.0.0",
-    "@dword-design/tester-plugin-nuxt": "^2.0.0",
+    "@dword-design/tester-plugin-nuxt": "^2.0.10",
     "@dword-design/tester-plugin-tmp-dir": "^2.1.6",
-    "depcheck-package-name": "^2.0.0",
-    "execa": "^5.0.0",
-    "fs-extra": "^10.0.0",
-    "mocha-ui-exports-auto-describe": "^2.0.0",
-    "nuxt": "~2.15.5",
-    "nuxt-sourcemaps-abs-sourceroot": "^2.0.0",
+    "depcheck-package-name": "^3.0.0",
+    "execa": "^6.1.0",
+    "fs-extra": "^11.1.0",
+    "nuxt": "^2",
     "output-files": "^2.0.0",
     "sass": "^1.32.8",
-    "sass-loader": "^10.0.0",
-    "unify-mocha-output": "^2.0.0"
+    "sass-loader": "^10.0.0"
   },
   "peerDependencies": {
     "@dword-design/puppeteer": "^5.0.0"
