@@ -11,8 +11,10 @@ export default (options = {}) => {
 
   return {
     async afterEach() {
-      await this.page.close()
-      await this.browser.close()
+      if (this.browser) {
+        await this.page.close()
+        await this.browser.close()
+      }
       if (useXvfb) {
         xvfb.stopSync()
       }
