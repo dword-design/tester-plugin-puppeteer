@@ -1629,14 +1629,14 @@
   integrity sha512-hqREdzS0UiNaGxm50Kl/PdZCjr+jhID581Y/csnAc8BFU6+fulL6uAEOUCQUm59ejtnf9ifDCfSKrMEK+MvvbA==
 
 "@dword-design/tester-plugin-nuxt@^2.0.10":
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-2.0.14.tgz#41b9aa14565941980ba95dc6cfb4dc2e3a80e76f"
-  integrity sha512-QXyX6CLhJlbQkXyPLR8P8MpNF+fw3n7q2ccETezIqZSdORuNzhE/kaaa/nPKgJt17cMVxaK+FeQqXcCu2drG7A==
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-2.0.17.tgz#2bd3a0c25480416d4985494addd183d61d9c2998"
+  integrity sha512-meGuA/S1O7CQIyGN1GEWxWznypHA70ajn4qTHjbAZrgves8P4QcovlCNS6L/Wl0bCOUXSBejTU+PcFDra8R+ag==
 
 "@dword-design/tester-plugin-tmp-dir@^2.1.6":
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-tmp-dir/-/tester-plugin-tmp-dir-2.1.12.tgz#29879578c147f6285326f12f93d4e62ad4c9d066"
-  integrity sha512-kT+zXxWFNUEJSuAIz+vFIPVpmJhhoMGr7Xx2rg7JbL532CYpQvKdSK9i3+qe7DNX0FhgTqax4T60MbV4KrUrog==
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-tmp-dir/-/tester-plugin-tmp-dir-2.1.14.tgz#be88b3a8993eaab4d874f299276a4348eadedffe"
+  integrity sha512-iGnPtL20Ot9mJpMT3MMNnLiogERMInXUt3OfaiIKOJzx+tKawU9496IH1cQFuMYcrtDKrbml0HwDh6pzl6R5ZA==
   dependencies:
     with-local-tmp-dir "^5.0.0"
 
