@@ -1,3 +1,10 @@
+## [2.1.27](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.26...v2.1.27) (2023-03-18)
+
+
+### Bug Fixes
+
+* update dependency sass to v1.59.3 ([c2b3dcc](https://github.com/dword-design/tester-plugin-puppeteer/commit/c2b3dcc5c770e4741cb98d58bbc90632d2f5e81b))
+
 ## [2.1.26](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.25...v2.1.26) (2023-03-16)
 
 
