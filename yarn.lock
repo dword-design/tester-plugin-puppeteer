@@ -1690,9 +1690,9 @@
   integrity sha512-hqREdzS0UiNaGxm50Kl/PdZCjr+jhID581Y/csnAc8BFU6+fulL6uAEOUCQUm59ejtnf9ifDCfSKrMEK+MvvbA==
 
 "@dword-design/tester-plugin-nuxt@^2.0.10":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-2.0.17.tgz#2bd3a0c25480416d4985494addd183d61d9c2998"
-  integrity sha512-meGuA/S1O7CQIyGN1GEWxWznypHA70ajn4qTHjbAZrgves8P4QcovlCNS6L/Wl0bCOUXSBejTU+PcFDra8R+ag==
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-nuxt/-/tester-plugin-nuxt-2.0.18.tgz#26be1ffd2612b2e2fae21a79601e854e72ece308"
+  integrity sha512-Fn9cG1HJGIKizYu+yi8v7ZkM5Y8qIKMGVP34fQAi1krvWD8CO06n++m+hj9x418JKPkKvtUQJ+Bqpbi54i/sBg==
 
 "@dword-design/tester-plugin-tmp-dir@^2.1.6":
   version "2.1.15"
