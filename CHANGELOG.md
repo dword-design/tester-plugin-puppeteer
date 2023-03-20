@@ -1,3 +1,10 @@
+## [2.1.41](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.40...v2.1.41) (2023-03-20)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v11.1.1 ([64e0016](https://github.com/dword-design/tester-plugin-puppeteer/commit/64e001641e82f716cec96c8279be667cb60e4443))
+
 ## [2.1.40](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.39...v2.1.40) (2023-03-20)
 
 
