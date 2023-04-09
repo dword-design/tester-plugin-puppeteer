@@ -26,7 +26,7 @@ export default (options = {}) => {
       this.browser = await puppeteer.launch(options.launchOptions)
       this.page = await this.browser.newPage()
       this.page.on('framenavigated', () =>
-        this.page.addStyleTag({ content: '* { caret-color: transparent }' })
+        this.page.addStyleTag({ content: '* { caret-color: transparent }' }),
       )
     },
   }
