@@ -36,7 +36,7 @@
     "depcheck-package-name": "^3.0.0",
     "execa": "^6.1.0",
     "fs-extra": "^11.1.0",
-    "nuxt": "^2",
+    "nuxt": "^3.0.0",
     "output-files": "^2.0.0",
     "sass": "^1.32.8",
     "sass-loader": "^10.0.0"
