@@ -36,7 +36,7 @@
     "execa": "^8.0.1",
     "fs-extra": "^11.1.0",
     "nuxt": "^3.9.3",
-    "nuxt-dev-ready": "^2.0.1",
+    "nuxt-dev-ready": "^3.0.0",
     "output-files": "^2.0.0",
     "sass": "^1.70.0",
     "tree-kill-promise": "^3.0.14"
