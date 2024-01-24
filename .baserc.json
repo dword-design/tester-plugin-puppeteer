@@ -3,8 +3,7 @@
   "testInContainer": true,
   "depcheckConfig": {
     "ignoreMatches": [
-      "sass",
-      "sass-loader"
+      "sass"
     ]
   }
 }
