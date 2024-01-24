@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.68...v3.0.0) (2024-01-24)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#179](https://github.com/dword-design/tester-plugin-puppeteer/issues/179)) ([b87eaa1](https://github.com/dword-design/tester-plugin-puppeteer/commit/b87eaa1515d49433692785d28cc37b6fef1dfd27))
+
+
+### BREAKING CHANGES
+
+* nodejs >= 18
+
 ## [2.1.68](https://github.com/dword-design/tester-plugin-puppeteer/compare/v2.1.67...v2.1.68) (2023-04-28)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@dword-design/tester-plugin-puppeteer",
-  "version": "2.1.68",
+  "version": "3.0.0",
   "repository": "dword-design/tester-plugin-puppeteer",
   "funding": "https://github.com/sponsors/dword-design",
   "license": "MIT",
