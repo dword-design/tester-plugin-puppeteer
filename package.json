@@ -42,7 +42,7 @@
     "tree-kill-promise": "^3.0.14"
   },
   "peerDependencies": {
-    "@dword-design/puppeteer": "^5.0.0"
+    "@dword-design/puppeteer": "^7.0.0"
   },
   "engines": {
     "node": ">=18"
