@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/dword-design/tester-plugin-puppeteer/compare/v3.0.2...v3.0.3) (2024-03-06)
+
+
+### Bug Fixes
+
+* remove xvfb ([65b71ed](https://github.com/dword-design/tester-plugin-puppeteer/commit/65b71ed9d35e98dc0f4b95a30060758627793059))
+
 ## [3.0.2](https://github.com/dword-design/tester-plugin-puppeteer/compare/v3.0.1...v3.0.2) (2024-03-06)
 
 
