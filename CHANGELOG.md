@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/dword-design/tester-plugin-puppeteer/compare/v3.0.1...v3.0.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* foo ([f7413f4](https://github.com/dword-design/tester-plugin-puppeteer/commit/f7413f4bb695ae70076bbf070b0387d6dcb89a74))
+
 ## [3.0.1](https://github.com/dword-design/tester-plugin-puppeteer/compare/v3.0.0...v3.0.1) (2024-03-06)
 
 
