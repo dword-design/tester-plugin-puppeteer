@@ -22,10 +22,6 @@
     "test": "base test",
     "test:raw": "base test:raw"
   },
-  "dependencies": {
-    "is-docker": "^3.0.0",
-    "xvfb": "^0.4.0"
-  },
   "devDependencies": {
     "@dword-design/base": "^11.0.2",
     "@dword-design/functions": "^6.0.0",

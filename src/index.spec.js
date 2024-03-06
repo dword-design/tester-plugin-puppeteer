@@ -1,9 +1,15 @@
-import { endent, map, range } from '@dword-design/functions'
+import {
+  endent,
+  endent as javascript,
+  map,
+  range,
+} from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import packageName from 'depcheck-package-name'
 import { execaCommand } from 'execa'
 import fs from 'fs-extra'
+import outputFiles from 'output-files'
 
 export default tester(
   {
@@ -67,12 +73,55 @@ export default tester(
         }, [self()])
       `,
     },
-    headful: {
-      testFile: endent`
+    extension: {
+      files: {
+        dist: {
+          'content.js': "document.body.classList.add('foo')",
+          'manifest.json': JSON.stringify({
+            content_scripts: [{ js: ['content.js'], matches: ['<all_urls>'] }],
+            manifest_version: 3,
+            name: 'foo',
+            version: '1.0.0',
+          }),
+        },
+        'pages/index.vue': endent`
+          <template>
+            <div />
+          </template>
+        `,
+      },
+      testFile: javascript`
         import tester from '${packageName`@dword-design/tester`}'
+        import fs from 'fs-extra'
+        import nuxtDevReady from '${packageName`nuxt-dev-ready`}'
+        import { execaCommand } from 'execa'
+        import kill from 'tree-kill-promise'
+        import { endent } from '@dword-design/functions'
+        import { expect } from '${packageName`expect`}'
+
         import self from '../src/index.js'
 
-        export default tester({ works: () => {} }, [self({ launchOptions: { headless: false } })])
+        export default tester(
+          {
+            async works() {
+              const nuxt = execaCommand('${packageName`nuxt`} dev')
+              await nuxtDevReady()
+              try {
+                await this.page.goto('http://localhost:3000')
+                expect(await this.page.evaluate(() => [...document.body.classList])).toContain('foo')
+              } finally {
+                await kill(nuxt.pid)
+              }
+            },
+          }, [
+            self({ launchOptions: {
+              args: [
+                '--load-extension=dist',
+                '--disable-extensions-except=dist',
+              ],
+            }
+          })
+        ])
       `,
     },
     launchOptions: {
@@ -222,11 +271,15 @@ export default tester(
     {
       transform: ({
         testFile,
+        files = {},
         test = () =>
           execaCommand('mocha --ui exports --timeout 80000 index.spec.js'),
       }) =>
         async function () {
-          await fs.outputFile('index.spec.js', testFile)
+          await outputFiles({
+            'index.spec.js': testFile,
+            ...files,
+          })
           await test.call(this)
         },
     },
