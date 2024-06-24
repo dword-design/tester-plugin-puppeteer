@@ -3,26 +3,27 @@ import {
   endent as javascript,
   map,
   range,
-} from '@dword-design/functions'
-import tester from '@dword-design/tester'
-import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import packageName from 'depcheck-package-name'
-import { execaCommand } from 'execa'
-import fs from 'fs-extra'
-import outputFiles from 'output-files'
+} from '@dword-design/functions';
+import tester from '@dword-design/tester';
+import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
+import packageName from 'depcheck-package-name';
+import { execaCommand } from 'execa';
+import fs from 'fs-extra';
+import outputFiles from 'output-files';
 
 export default tester(
   {
     caret: {
       async test() {
-        await execaCommand('mocha --ui exports --timeout 80000 index.spec.js')
+        await execaCommand('mocha --ui exports --timeout 80000 index.spec.js');
+
         await (range(10)
           |> map(async index =>
             expect(
               fs.readFile(`screenshot${index}.png`) |> await,
             ).toMatchImageSnapshot(this),
           )
-          |> Promise.all)
+          |> Promise.all);
       },
       testFile: endent`
         import tester from '${packageName`@dword-design/tester`}'
@@ -279,9 +280,10 @@ export default tester(
           await outputFiles({
             'index.spec.js': testFile,
             ...files,
-          })
-          await test.call(this)
+          });
+
+          await test.call(this);
         },
     },
   ],
-)
+);
